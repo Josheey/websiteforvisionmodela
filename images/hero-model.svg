@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Architectural scale model placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F3F4F6"/>
+      <stop offset="100%" style="stop-color:#E5E7EB"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9CA3AF"/>
+      <stop offset="100%" style="stop-color:#6B7280"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D1D5DB"/>
+      <stop offset="100%" style="stop-color:#C4C4C4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1A1A1A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- Presentation base -->
+  <rect x="120" y="420" width="560" height="24" rx="2" fill="#2D2D2D" filter="url(#shadow)"/>
+  <rect x="140" y="444" width="520" height="8" rx="1" fill="#1A1A1A" opacity="0.3"/>
+
+  <!-- Main house structure -->
+  <g filter="url(#shadow)" transform="translate(400, 280)">
+    <!-- Left wing -->
+    <polygon points="-180,80 -180,-20 -80,-60 -80,80" fill="url(#wall)" stroke="#888" stroke-width="1"/>
+    <polygon points="-180,-20 -80,-60 20,-20 20,80 -180,80" fill="#E5E7EB" stroke="#888" stroke-width="1" opacity="0.9"/>
+
+    <!-- Main body -->
+    <polygon points="20,80 20,-20 120,-60 120,80" fill="url(#wall)" stroke="#888" stroke-width="1"/>
+    <polygon points="20,-20 120,-60 220,-20 220,80 20,80" fill="#D4D4D4" stroke="#888" stroke-width="1"/>
+
+    <!-- Right wing -->
+    <polygon points="220,80 220,-20 320,-60 320,80" fill="url(#wall)" stroke="#888" stroke-width="1"/>
+    <polygon points="220,-20 320,-60 420,-20 420,80 220,80" fill="#E5E7EB" stroke="#888" stroke-width="1" opacity="0.9"/>
+
+    <!-- Roof (removable style - slightly offset) -->
+    <polygon points="-190,-25 -80,-65 20,-25" fill="url(#roof)" stroke="#666" stroke-width="1" opacity="0.85"/>
+    <polygon points="10,-25 120,-65 230,-25" fill="url(#roof)" stroke="#666" stroke-width="1"/>
+    <polygon points="210,-25 320,-65 430,-25" fill="url(#roof)" stroke="#666" stroke-width="1" opacity="0.85"/>
+
+    <!-- Interior furniture hints (visible through open roof) -->
+    <rect x="-60" y="20" width="40" height="25" fill="#A8A8A8" rx="1"/>
+    <rect x="50" y="15" width="50" height="30" fill="#999" rx="1"/>
+    <rect x="130" y="20" width="35" height="20" fill="#A8A8A8" rx="1"/>
+    <rect x="260" y="25" width="45" height="28" fill="#999" rx="1"/>
+
+    <!-- Garage -->
+    <rect x="300" y="40" width="80" height="40" fill="#888" stroke="#666" stroke-width="1"/>
+    <rect x="315" y="55" width="25" height="15" fill="#6B7280" rx="1"/>
+  </g>
+
+  <!-- Miniature vehicle -->
+  <rect x="520" y="395" width="50" height="22" rx="3" fill="#6B7280" opacity="0.8"/>
+  <circle cx="532" cy="417" r="5" fill="#4B5563"/>
+  <circle cx="558" cy="417" r="5" fill="#4B5563"/>
+
+  <!-- Subtle grid lines (architectural feel) -->
+  <g stroke="#D1D5DB" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+</svg>
